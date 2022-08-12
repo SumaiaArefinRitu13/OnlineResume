@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html id="container;">
+<head>
+	<meta charset="utf-8">
+	<title>Sumaia's PORTFOLIO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Istinub Azad, and Bootstrap contributors">
+
+    <link rel="icon"  href="Images\BlueRose.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+
+	<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Niramit:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mali:400,700" rel="stylesheet">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
+	
+
+
+    <!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+
+		.wrapper .icon:hover .tooltip {
+			left: -95px;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+
+		.content-block {
+			width: 75%;
+			margin: auto;
+		}
+
+
+		body {
+			font-size: 16px;
+			color: #101010;
+		}
+		.container {
+			width: 950px;
+			margin: 50px auto 0px auto;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-weight: 400;
+			font-size: 35px;
+		}
+		h1 span {
+
+			font-weight: bold;
+			color: #304d7a;
+		}
+		.link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 80%;
+			margin: 30px auto 0;
+			margin-top: 50px;
+		}
+		.link a {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			display: inline-flex;
+			align-items: center;
+			margin-right: 20px;
+			font-size: 17px;
+			color: black;
+			text-decoration: none;
+		}
+		.link a:last-child {
+			margin-right: 0;
+		}
+		.link a:hover {
+			color: #307a7a;
+		}
+		.link a i {
+			color: #307a7a;
+			margin-right: 5px;
+		}
+		.content-block {
+			margin-top: 50px;
+		}
+		.content-block h2 {
+			margin-bottom: 30px;
+		}
+		.content-block__effect {
+			margin-bottom: 50px;
+		}
+
+		.portfolio-effect {
+			display: flex;
+			justify-content: space-between;
+		}
+		.portfolio-item {
+			/* border: 1px solid; */
+			position: relative;
+			overflow: hidden;
+			width: 300px;
+			height: 300px;
+			box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+		}
+		.portfolio-item img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			max-width: 200%;
+			max-height: 200%;
+			transform: translate(-50%, -50%);
+		}
+		.portfolio-item__info {
+			position: absolute;
+			top: 7px;
+			left: 7px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: calc(100% - 2 * 7px);
+			height: calc(100% - 2 * 7px);
+			background-color: rgba(111, 202, 255, 0.61);
+		}
+		.portfolio-item__header {
+			position: relative;
+			margin: 0 0 20px 0;
+			padding: 15px 0;
+			font-size: 22px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		.portfolio-item__header:after {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #8c96bd;
+		}
+		.portfolio-item__links {
+			display: flex;
+		}
+		.portfolio-item__link-block {
+			position: relative;
+			width: 35px;
+			height: 35px;
+			margin-right: 10px;
+		}
+		.portfolio-item__link-block:last-child {
+			margin-right: 0;
+		}
+		.portfolio-item__link {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			color: #101010;
+			text-decoration: none;
+			border: 1px solid #101010;
+			border-radius: 50%;
+		}
+		.portfolio-item__link:hover {
+			color: rgb(255, 255, 255);
+			background-color: #4ea561;
+		}
+
+		/* EFFECT #1 STYLES */
+		.portfolio-item--eff1 .portfolio-item__info {
+			transform: scale(1.1);
+			opacity: 0;
+		}
+		.portfolio-item--eff1 .portfolio-item__header {
+			top: -10px;
+			opacity: 0;
+		}
+		.portfolio-item--eff1 .portfolio-item__header:after {
+			transform: scaleX(0);
+		}
+		.portfolio-item--eff1 .portfolio-item__link-block {
+			top: 20px;
+			opacity: 0;
+		}
+		.portfolio-item--eff1:hover .portfolio-item__info {
+			transition-property: all;
+			transition-duration: 0.4s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			transform: scale(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff1:hover .portfolio-item__header {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.45s;
+			top: 0;
+			opacity: 1;
+		}
+		.portfolio-item--eff1:hover .portfolio-item__header:after {
+			transition-property: all;
+			transition-duration: 0.3s;
+			transition-timing-function: cubic-bezier(0.63, 0.01, 0, 1.39);
+			transition-delay: 0.65s;
+			transform: scaleX(1);
+		}
+		.portfolio-item--eff1:hover .portfolio-item__link-block {
+			top: 0;
+			opacity: 1;
+		}
+		.portfolio-item--eff1:hover .portfolio-item__link-block:first-child {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.85s;
+		}
+		.portfolio-item--eff1:hover .portfolio-item__link-block:nth-child(2) {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.95s;
+		}
+		
+		
+		/* EFFECT #3 STYLES */
+		.portfolio-item--eff3 .portfolio-item__info {
+			transition-property: transform;
+			transition-duration: 0.3s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			transform: scale(0, 1);
+			transform-origin: right top;
+		}
+		.portfolio-item--eff3 .portfolio-item__header {
+			transform: scale(0.4);
+			opacity: 0;
+		}
+		.portfolio-item--eff3 .portfolio-item__header:after {
+			bottom: - 20px;
+			opacity: 0;
+		}
+		.portfolio-item--eff3 .portfolio-item__link-block {
+			opacity: 0;
+		}
+		.portfolio-item--eff3 .portfolio-item__link-block:first-child {
+			transform: translateX(-50%);
+		}
+		.portfolio-item--eff3 .portfolio-item__link-block:nth-child(2) {
+			transform: translateX(50%);
+		}
+		.portfolio-item--eff3:hover .portfolio-item__info {
+			transition-property: transform;
+			transition-duration: 0.3s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			transform: scale(1, 1);
+			transform-origin: left top;
+		}
+		.portfolio-item--eff3:hover .portfolio-item__header {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.45s;
+			transform: scale(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff3:hover .portfolio-item__header:after {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.6s;
+			bottom: 0;
+			opacity: 1;
+		}
+		.portfolio-item--eff3:hover .portfolio-item__link-block {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.85s;
+			transform: translateX(0);
+			opacity: 1;
+		}
+		/* EFFECT #4 STYLES */
+		.portfolio-item--eff4 .portfolio-item__info {
+			transform: scale(0.4);
+			opacity: 0;
+		}
+		.portfolio-item--eff4 .portfolio-item__header {
+			transform: scale(1.3);
+			opacity: 0;
+		}
+		.portfolio-item--eff4 .portfolio-item__header:after {
+			transform: scaleX(1.3);
+			opacity: 0;
+		}
+		.portfolio-item--eff4 .portfolio-item__link-block {
+			transform: scale(0);
+			opacity: 0;
+		}
+		.portfolio-item--eff4:hover .portfolio-item__info {
+			transition-property: all;
+			transition-duration: 0.3s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			transform: scale(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff4:hover .portfolio-item__header {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.45s;
+			transform: scale(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff4:hover .portfolio-item__header:after {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.65s;
+			transform: scaleX(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff4:hover .portfolio-item__link-block {
+			transform: scale(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff4:hover .portfolio-item__link-block:first-child {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.85s;
+		}
+		.portfolio-item--eff4:hover .portfolio-item__link-block:nth-child(2) {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.95s;
+		}
+		/* EFFECT #5 STYLES */
+		.portfolio-item--eff5 .portfolio-item__info {
+			transform: scale(0.4);
+			transform-origin: right top;
+			opacity: 0;
+		}
+		.portfolio-item--eff5 .portfolio-item__header {
+			opacity: 0;
+		}
+		.portfolio-item--eff5 .portfolio-item__header:after {
+			height: 100%;
+			opacity: 0;
+		}
+		.portfolio-item--eff5 .portfolio-item__link-block {
+			opacity: 0;
+		}
+		.portfolio-item--eff5 .portfolio-item__link-block:first-child {
+			transform: translateX(30%);
+		}
+		.portfolio-item--eff5 .portfolio-item__link-block:nth-child(2) {
+			transform: translateX(-30%);
+		}
+		.portfolio-item--eff5:hover .portfolio-item__info {
+			transition-property: all;
+			transition-duration: 0.3s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+			transform: scale(1);
+			opacity: 1;
+		}
+		.portfolio-item--eff5:hover .portfolio-item__header {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.45s;
+			opacity: 1;
+		}
+		.portfolio-item--eff5:hover .portfolio-item__header:after {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.65s;
+			height: 2px;
+			opacity: 1;
+		}
+		.portfolio-item--eff5:hover .portfolio-item__link-block {
+			transition-property: all;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+			transition-delay: 0.85s;
+			transform: translate(0);
+			opacity: 1;
+		}
+
+
+	</style>
+
+	
+
+
+</head>
+<body>
+
+	<ul class="wrapper">
+		<a href="#GW">
+		<li class="icon first">
+		  	<span class="tooltip">Graphics</span>
+		</li></a>
+		<a href="#WD">
+		<li class="icon second">
+		  	<span class="tooltip">Web Dev</span>
+		</li></a>
+		<a href="#BOT">
+		<li class="icon third">
+		  	<span class="tooltip">Robotics</span>
+		</li></a>
+		<a href="#NET">
+		<li class="icon forth">
+		  	<span class="tooltip">Networking</span>
+		</li></a>
+	</ul>
+
+
+
+
+	<div class="allElements">
+		<div class="container">
+			<header class="d-flex justify-content-center py-3">
+				<ul class="nav nav-pills">
+					<li class="nav-item"><a href="index.html" class="nav-link">About me</a></li>
+					<li class="nav-item"><a href="Resume.html" class="nav-link active">Portfolio</a></li>
+				</ul>
+			</header>
+			<hr class="dividing_line">
+
+		</div>
+
+		<div class="link"><a href="https://github.com" title="Check on GitHub" target="_blanc"><i class="material-icons">cloud</i>Click here to Visit my GitHub profile</a></div>
+
+		<div class="content-block">    
+    
+			<!-- PROJECT TYPE: 1-->
+			<div class="content-block__effect">
+			  	<h2 id="GW">Graphics works</h2>
+			  	<div class="portfolio-effect">
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff1">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-28.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Illustrations</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff1">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-24.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Poster Designs</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item  portfolio-item--eff1">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-20.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Banner</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+			  </div>
+			</div>
+			
+			<!-- PROJECT TYPE: 3-->
+			<div class="content-block__effect">
+			  <h2 id="WD">Web Development</h2>
+			  
+			  <div class="portfolio-effect">
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff3">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-13.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-1</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff3">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-14.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-2</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff3">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-17.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-3</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+			  </div>
+			  
+			</div>
+			
+			<!-- PROJECT TYPE: 3-->
+			<div class="content-block__effect">
+			  <h2 id="BOT">Robotics</h2>
+			  
+			  <div class="portfolio-effect">
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff4">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-22.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-1</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff4">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-27.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-2</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff4">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-29.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-3</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+			  </div>
+			  
+			</div>
+			
+			<!-- PROJECT TYPE: 4-->
+			<div class="content-block__effect">
+			  <h2 id="NET">Networking</h2>
+			  
+			  <div class="portfolio-effect">
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff5">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-31.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-1</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff5">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-32.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header">Project-2</h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+				<!-- portfolio item -->
+				<div class="portfolio-item portfolio-effect__item portfolio-item--eff5">
+					
+				  <img class="portfolio-item__image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-33.jpg" alt="Portfolio Item" width="826" height="551">
+		
+				  <div class="portfolio-item__info">
+		
+					<h3 class="portfolio-item__header"><Project-3></Project-3></h3>
+					
+					<div class="portfolio-item__links">
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">link</i>
+						
+						</a>
+						
+					  </div>
+					  
+					  <div class="portfolio-item__link-block">
+						
+						<a class="portfolio-item__link" href="#" title="Link Title">
+						  <i class="material-icons">search</i>
+						  
+						</a>
+						
+					  </div>
+					  
+					</div>
+		
+				  </div>
+					
+				</div>
+				
+			  </div>
+			  
+			</div>
+			
+
+
+	</div>
+
+
+</body>
+</html>
